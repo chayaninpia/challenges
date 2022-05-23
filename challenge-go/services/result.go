@@ -60,13 +60,13 @@ func (r *Result) Response() string {
 
 	if len(r.TopDonator) != 0 {
 		if len(r.TopDonator) == 1 {
-			line5 = fmt.Sprintf("top donors: %40v\n", r.TopDonator[0].Name)
+			line5 = fmt.Sprintf("      top donors: %10v\n", r.TopDonator[0].Name)
 		}
 		if len(r.TopDonator) == 2 {
-			line5 = fmt.Sprintf("top donors: %40v\n%40v\n", r.TopDonator[0].Name, r.TopDonator[1].Name)
+			line5 = fmt.Sprintf("      top donors: %10v\n%40v\n", r.TopDonator[0].Name, r.TopDonator[1].Name)
 		}
 		if len(r.TopDonator) == 3 {
-			line5 = fmt.Sprintf("top donors: %40v\n%40v\n%40v\n", r.TopDonator[0].Name, r.TopDonator[1].Name, r.TopDonator[2].Name)
+			line5 = fmt.Sprintf("      top donors: %10v\n%40v\n%40v\n", r.TopDonator[0].Name, r.TopDonator[1].Name, r.TopDonator[2].Name)
 		}
 
 	}
