@@ -2,10 +2,12 @@
 ``` 
 #clear unused dependencies
 go mod tidy
-
+``` 
+``` 
 #build go app
 go build
-
+``` 
+``` 
 #run app
 go run app data/fng.1000.csv.rot128
 ```
