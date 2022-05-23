@@ -10,6 +10,7 @@ go build
 go run app data/fng.1000.csv.rot128
 ```
 
+Set number of worker ,Public key and Secret key at .env file
 # GO-TAMBOON ไปทำบุญ
 
 This is a small challenge project to see how good you are with Go. Included in this

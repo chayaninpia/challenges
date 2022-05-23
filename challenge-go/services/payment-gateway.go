@@ -32,11 +32,12 @@ type PositonsCol struct {
 }
 
 func NewWorker() *Worker {
+	numWorker, _ := strconv.Atoi(os.Getenv(`NUM_WORKER`))
 	return &Worker{
 		WaitGroup:   sync.WaitGroup{},
 		PublicKey:   os.Getenv(`OMISE_PUBLIC_KEY`),
 		SecretKey:   os.Getenv(`OMISE_SECRET_KEY`),
-		NumWorker:   15,
+		NumWorker:   numWorker,
 		ChannelWork: make(chan *[]string),
 		PositonsCol: PositonsCol{
 			Amount: 1,
