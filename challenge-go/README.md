@@ -1,3 +1,15 @@
+# TO-RUN APP
+``` 
+#clear unused dependencies
+go mod tidy
+
+#build go app
+go build
+
+#run app
+go run app data/fng.1000.csv.rot128
+```
+
 # GO-TAMBOON ไปทำบุญ
 
 This is a small challenge project to see how good you are with Go. Included in this
