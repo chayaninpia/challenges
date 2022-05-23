@@ -36,7 +36,7 @@ func NewWorker() *Worker {
 		WaitGroup:   sync.WaitGroup{},
 		PublicKey:   os.Getenv(`OMISE_PUBLIC_KEY`),
 		SecretKey:   os.Getenv(`OMISE_SECRET_KEY`),
-		NumWorker:   10,
+		NumWorker:   15,
 		ChannelWork: make(chan *[]string),
 		PositonsCol: PositonsCol{
 			Amount: 1,

@@ -60,17 +60,17 @@ func (r *Result) Response() string {
 
 	if len(r.TopDonator) != 0 {
 		if len(r.TopDonator) == 1 {
-			line5 = fmt.Sprintf("top donors: %s\n", r.TopDonator[0].Name)
+			line5 = fmt.Sprintf("top donors: %40v\n", r.TopDonator[0].Name)
 		}
 		if len(r.TopDonator) == 2 {
-			line5 = fmt.Sprintf("top donors: %s\n%s\n", r.TopDonator[0].Name, r.TopDonator[1].Name)
+			line5 = fmt.Sprintf("top donors: %40v\n%40v\n", r.TopDonator[0].Name, r.TopDonator[1].Name)
 		}
 		if len(r.TopDonator) == 3 {
-			line5 = fmt.Sprintf("top donors: %s\n%s\n%s\n", r.TopDonator[0].Name, r.TopDonator[1].Name, r.TopDonator[2].Name)
+			line5 = fmt.Sprintf("top donors: %40v\n%40v\n%40v\n", r.TopDonator[0].Name, r.TopDonator[1].Name, r.TopDonator[2].Name)
 		}
 
 	}
-	return fmt.Sprintf("%40v\n%40v\n%40v\n%40v\n%40v", line1, line2, line3, line4, line5)
+	return fmt.Sprintf("%40v\n%40v\n%40v\n\n%40v\n%40v", line1, line2, line3, line4, line5)
 }
 
 func (r *Result) TranSuccess(amount int64, name string) {
