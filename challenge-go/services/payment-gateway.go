@@ -100,7 +100,7 @@ func (c *Worker) charge(rowPtr *[]string, client *omise.Client) bool {
 	}
 	if err := client.Do(token, createToken); err != nil {
 		retry := true
-		log.Printf(`create token : %v`, err)
+		// log.Printf(`create token : %v`, err)
 
 		if !checkToManyReq(err) {
 			retry = false
@@ -117,7 +117,7 @@ func (c *Worker) charge(rowPtr *[]string, client *omise.Client) bool {
 	}
 	if err := client.Do(charge, createCharge); err != nil {
 		retry := true
-		log.Printf(`create charge : %v`, err)
+		// log.Printf(`create charge : %v`, err)
 		if !checkToManyReq(err) {
 			retry = false
 			c.Result.TranFailed(amount)

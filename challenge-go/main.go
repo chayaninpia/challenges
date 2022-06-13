@@ -38,7 +38,6 @@ func main() {
 		}
 		row := strings.Split(line, ",")
 		worker.ChannelWork <- &row
-
 	}
 
 	worker.Close()

@@ -76,7 +76,7 @@ func (r *Result) Response() string {
 func (r *Result) TranSuccess(amount int64, name string) {
 	r.Mutex.Lock()
 	r.NumSuccess = r.NumSuccess + 1
-	r.Donator[name] = float64(amount) * 0.01
+	r.Donator[name] += float64(amount) * 0.01
 	r.TotalAmount += float64(amount) * 0.01
 	r.Mutex.Unlock()
 }
